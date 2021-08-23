@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 
 import "./App.css";
 import CharacterGrid from "./components/CharacterGrid";
-import WelcomeBlock from "./components/WelcomeBlock";
+import InfoBlock from "./components/InfoBlock";
 
 function App() {
-  const [gameState, setGameState] = useState("welcome");
+  const [gameState, setGameState] = useState("highest score");
   const [allCharacters, setAllCharacters] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
@@ -70,7 +70,11 @@ function App() {
   if (gameState === "welcome") {
     return (
       <div className="welcome-block">
-        <WelcomeBlock />
+        <InfoBlock
+          title="Breaking Bad memory Game"
+          body="Get a point by clicking a card that has not yet been clicked. If you click the same card twice in a round, you lose! Once all cards in a round have been clicked, a new round starts with more cards.
+        "
+        />
         <button onClick={startNewGame}>New Game</button>
       </div>
     );
@@ -80,8 +84,10 @@ function App() {
   if (gameState === "highest score") {
     return (
       <div className="highest score">
-        <h1>You win!</h1>
-        <p>You have achieved the highest possible score!</p>
+        <InfoBlock
+          title="You win!"
+          body="You have achieved the highest possible score!"
+        />
         <button onClick={startNewGame}>New Game</button>
       </div>
     );
@@ -91,8 +97,7 @@ function App() {
   if (gameState === "game over") {
     return (
       <div className="game-over">
-        <h1>Game Over</h1>
-        <p>Score: {currentScore}</p>
+        <InfoBlock title="Game Over" body={`Score: ${currentScore}`} />
         <button onClick={startNewGame}>New Game</button>
       </div>
     );

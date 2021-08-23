@@ -1,0 +1,25 @@
+.title-card {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 500px;
+}
+
+.info-block > h1 {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.info-block > p {
+  max-width: 390px;
+  margin: auto;
+}
+
+.info-block {
+  text-align: center;
+  margin: auto;
+}
