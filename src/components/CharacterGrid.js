@@ -25,9 +25,15 @@ function CharacterGrid(props) {
 
   const shuffledChars = shuffle(props.characters.slice(0, props.limit));
   return (
-    <div className="character-grid" onClick={props.clickCharacterCard}>
+    <div className="character-grid">
       {shuffledChars.map((char) => {
-        return <CharacterCard key={char.char_id} characterData={char} />;
+        return (
+          <CharacterCard
+            key={char.char_id}
+            characterData={char}
+            clickCharacterCard={props.clickCharacterCard}
+          />
+        );
       })}
     </div>
   );

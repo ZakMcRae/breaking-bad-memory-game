@@ -1,6 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #093009;
   text-align: center;
   color: #a1a1a1;
   font-family: sans-serif;
+  margin: auto;
+  text-align: center;
+}
+
+.score-board {
+  text-align: center;
+  margin: 10px auto;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #093009;
+  border-radius: 5px;
+  border-color: #a1a1a1;
+  font-size: 20px;
+  color: #a1a1a1;
 }

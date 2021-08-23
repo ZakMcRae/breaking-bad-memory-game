@@ -5,15 +5,15 @@ import CharacterGrid from "./components/CharacterGrid";
 import InfoBlock from "./components/InfoBlock";
 
 function App() {
-  const [gameState, setGameState] = useState("highest score");
+  const [gameState, setGameState] = useState("welcome");
   const [allCharacters, setAllCharacters] = useState([]);
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [round, setRound] = useState(1);
   const [clickedCards, setClickedCards] = useState([]);
 
-  const cardsToShow = 4;
-  const highestScore = 40;
+  const cardsToShow = 6;
+  const highestScore = 60;
 
   // fetch api data on page load - first time only
   useEffect(() => {
@@ -83,7 +83,7 @@ function App() {
   // Highest Score Possible Page
   if (gameState === "highest score") {
     return (
-      <div className="highest score">
+      <div className="highest-score">
         <InfoBlock
           title="You win!"
           body="You have achieved the highest possible score!"
@@ -106,7 +106,7 @@ function App() {
   // Game Page
   if (gameState === "game") {
     return (
-      <div className="App">
+      <div className="game">
         <div className="score-board">
           <h1>Round {round}</h1>
           <p>Current Score: {currentScore}</p>

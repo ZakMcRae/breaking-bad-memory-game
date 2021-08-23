@@ -2,7 +2,11 @@ import "./CharacterCard.css";
 
 function CharacterCard(props) {
   return (
-    <div className="character-card" id={props.characterData.char_id}>
+    <div
+      className="character-card"
+      id={props.characterData.char_id}
+      onClick={props.clickCharacterCard}
+    >
       <img
         src={props.characterData.img}
         alt={props.characterData.name}
