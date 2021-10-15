@@ -2,7 +2,7 @@
   "name": "memory-game",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://zakmcrae.github.io/memory-game/",
+  "homepage": "https://zakmcrae.github.io/breaking-bad-memory-game/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
