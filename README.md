@@ -9,7 +9,7 @@ This app is a game. It displays characters from the TV show breaking bad on a ca
 Each time a user clicks a card that has not yet been clicked in a round gets a point. The cards are shuffled after each click.
 Every round has progressively more cards making it harder. 
 
-![](https://i.imgur.com/4CUmd9r.png)
+[![](https://i.imgur.com/4CUmd9r.png)](https://zakmcrae.github.io/breaking-bad-memory-game/)
 
 ## Learned on project
 - got a familiarity to React front end framework
